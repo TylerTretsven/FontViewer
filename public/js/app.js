@@ -29,25 +29,25 @@ FontViewer.data = {
       'font-size': 32,
       'line-height': 1.25,
       'letter-spacing': 0,
-      'color': "rgb(55,55,55)"
+      'color': "rgb(30,30,30)"
     },
     H2: {
       'font-size': 24,
       'line-height': 1.25,
       'letter-spacing': 0,
-      'color': "rgb(55,55,55)"
+      'color': "rgb(30,30,30)"
     },
     H3: {
       'font-size': 19,
       'line-height': 1.25,
       'letter-spacing': 0,
-      'color': "rgb(55,55,55)"
+      'color': "rgb(30,30,30)"
     },
     P: {
       'font-size': 16,
       'line-height': 1.25,
       'letter-spacing': 0,
-      'color': "rgb(55,55,55)"
+      'color': "rgb(30,30,30)"
     }
   }
 };
