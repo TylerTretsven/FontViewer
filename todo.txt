@@ -1,0 +1,7 @@
+TODO
+========
+
+- Decide on a backend --> Express, Rails, or Django (probably Express).
+- Incorporate into the backend (without an backend function).
+- Separate out a font viewer helper-function API and make a module with private and public functions.
+- Get sliders operational (though not necessarily attached to anything).

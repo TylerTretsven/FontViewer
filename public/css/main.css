@@ -1,0 +1,133 @@
+/* Layout */
+/* Colors */
+html, body {
+  height: 100%;
+  margin: 0;
+  color: #373737;
+  font-size: 16px;
+  line-height: 1.25; }
+
+#wrapper {
+  height: 100%;
+  width: 100%;
+  position: relative; }
+
+#topbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 43px;
+  background-color: #444444;
+  border-bottom: solid 1px #5a5a5a;
+  border-top: solid 1px #5a5a5a;
+  z-index: 100; }
+
+#brand {
+  height: 100%;
+  margin: 5px 0 0 15px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 27px;
+  text-shadow: 0 1px 1px #191919;
+  font-weight: 400; }
+
+#brand #arche {
+  color: #fb4834; }
+
+#brand #type {
+  color: whitesmoke; }
+
+#console {
+  position: fixed;
+  top: 45px;
+  bottom: 0;
+  left: 0;
+  width: 246px;
+  background-color: whitesmoke;
+  border-right: solid 1px #aaaaaa;
+  z-index: 10;
+  padding-top: 20px; }
+
+.label {
+  color: #373737;
+  padding: 0 15px;
+  line-height: 31px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 14px; }
+
+.slider {
+  margin: 5px 14px 20px 14px; }
+
+/* jQuery Slider replacement classes */
+/* slider handle */
+.ui-slider {
+  position: relative;
+  text-align: left; }
+
+.ui-slider-horizontal {
+  height: 4px; }
+
+.ui-widget {
+  font-family: Verdana,Arial,sans-serif;
+  font-size: 1.1em; }
+
+.ui-widget-content {
+  border: 1px solid #aaaaaa;
+  background: white;
+  color: #222222; }
+
+.ui-corner-all {
+  border-radius: 3px; }
+
+/* slider handle */
+.ui-slider .ui-slider-handle {
+  position: absolute;
+  z-index: 2;
+  width: 10px;
+  height: 10px;
+  cursor: default; }
+
+.ui-slider-horizontal .ui-slider-handle {
+  top: -.25em;
+  margin-left: -.1em;
+  border-radius: 50%; }
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+  border: 1px solid #fb4834;
+  background-color: white;
+  font-weight: normal;
+  color: #555555;
+  border-radius: 50%; }
+
+/* End jQuery Slider replacement classes */
+#display-box {
+  position: absolute;
+  top: 45px;
+  width: 100%;
+  height: 100%;
+  z-index: 1; }
+
+#display {
+  margin: auto;
+  padding: 55px 0;
+  padding-left: 247px;
+  width: 650px;
+  height: auto;
+  max-width: 90%; }
+
+h1, h2, h3 {
+  padding: 0 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700; }
+
+p, blockquote {
+  padding: 0 20px;
+  font-family: "Libre Baskerville", serif; }
+
+:focus {
+  outline: none; }
+
+hr {
+  border: 0;
+  height: 1px;
+  background-color: #aaaaaa; }
