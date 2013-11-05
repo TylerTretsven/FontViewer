@@ -23,7 +23,7 @@ FontViewer.data = {
   // Is there a selected element type
   selected: "None",
 
-  // CSS storage.  Begins with defaults.
+  // CSS storage.  Initializes with defaults.
   cssStore: {
     H1: {
       'font-size': 32,
