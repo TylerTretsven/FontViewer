@@ -145,20 +145,20 @@ html, body {
     margin:auto;
     padding:55px 0;
     padding-left:$sidebar-width + 1;
-    width:650px;
+    width:650px; /* Initial Width */
     height:auto;
     max-width:90%;
 }
 
 h1, h2, h3 {
     padding: 0 20px;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Trebuchet MS", sans-serif;
     font-weight:700;
 }
 
 p, blockquote {
     padding: 0 20px;
-    font-family: "Libre Baskerville", serif;
+    font-family: georgia, serif;
 }
 
 :focus {

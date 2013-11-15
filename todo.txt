@@ -6,3 +6,7 @@ TODO
 - Separate out a font viewer helper-function API and make a module with private and public functions.
 
 - Get sliders operational (though not necessarily attached to anything).
+
+
+
+Instead of relaying the entire model when syncing, see if an object of only the changed properties can be sent.

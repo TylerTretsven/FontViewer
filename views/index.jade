@@ -4,7 +4,7 @@ html(lang='en')
     meta(charset='utf-8')
     title Google Webfont Viewer
     link(href='css/main.css', type='text/css', rel='stylesheet')
-    link(href='css/spectrum.css', type='text/css', rel='stylesheet')
+    link(href='css/vendor/spectrum.css', type='text/css', rel='stylesheet')
     // <link href="css/jquery-ui.css" type="text/css" rel="stylesheet">
     link(href='http://fonts.googleapis.com/css?family=Roboto:300,400,700|Montserrat:400,700|Libre+Baskerville', rel='stylesheet', type='text/css')
   body
@@ -12,7 +12,7 @@ html(lang='en')
     #wrapper
 
       #topbar
-        #brand= <span id="arche">Arche</span><span id="type">Type</span>
+        #brand <span id="arche">Arche</span><span id="type">Type</span>
       
       #console
         span.label Background Color: 
@@ -66,12 +66,14 @@ html(lang='en')
             Initially empty; Article loaded in init.js.  This creates
             an object array representation of the article that can be 
                                 
-    // Javascript
+    // Javascript Libs
     script(src='js/vendor/jQuery.js')
     script(src='js/vendor/jQueryUI.js')
     script(src='js/vendor/spectrum.js')
+    script(src='js/vendor/underscore.min.js')
+    script(src='js/vendor/backbone.min.js')    
+    
+    // Javascript App
     script(src='js/static.js')
     script(src='js/app.js')
     script(src='js/ui.js')
-    // <script src="js/article.js"></script>
-    script
