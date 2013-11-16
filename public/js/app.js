@@ -8,11 +8,12 @@
  *******************************************************/
 
 window.FontViewer = {
-  Model:  {},
-  Views:  {},
-  Router: {},
-  CSS:    {},
-  Env:    {}
+  Env:      {},
+  Model:    {},
+  Toolbox:  {},
+  Views:    {},
+  Router:   {},
+  Controls: {}
 };
 
 
@@ -21,61 +22,67 @@ window.FontViewer = {
  */
 
 FontViewer.Env = {
-    // Display window ids
-    displayWindow: "#display-box",
-    displayContainer: "#display",
-    selected: ""
-  };
+  
+  // Display window ids
+  displayWindow: '#display-box',
+  displayContainer: '#display'
+};
+
 
 /*
  * Font Viewer API
  */
 
-FontViewer.API = {};
+(function(Toolbox) {
 
-(function(API) {
-
-// Sets the selected value to the parameter
-FontViewer.API.setSelected = function(elem) {
-  FontViewer.selected = elem;
-}
-
-FontViewer.API.changeStyle = function(style, value) {
-  // If there is an element selected, it will change that element's
-  // CSS to reflect the changes
-  if (!FontViewer.data.selected === "None") {
-    $(FontViewer.data.selected).css(style, value);
-  } else {
-    console.log("No Element Selected");
-  }
-};
-
-FontViewer.API.getStyles = function(elem) {
-
-  var output = {};
-  
   var styles = [
-    "font-family", "font-size", "font-style",
-    "line-height", "color", "letter-spacing",
-    "word-spacing", "text-decoration", "text-align",
-    "font-weight", "margin-bottom"
+    'font-family', 'font-size', 'font-style',
+    'line-height', 'color', 'letter-spacing',
+    'word-spacing', 'text-decoration', 'text-align',
+    'font-weight', 'margin-bottom'
   ];
 
-  for (var i = 0; i < styles.length; i++) {
-    output[styles[i]] = $(elem).css(styles[i])
+  // Contains the CSS selector for the selected element
+  var selected = '';
+
+  function isSelected() {
+    return !selected === 'None';
+  };
+
+  // Sets the selected value to the parameter
+  Toolbox.setSelected = function(elem) {
+    selected = elem;
   }
 
-  return output;
-};
+  Toolbox.getSelected = function() { return selected; }
 
-)(FontViewer.API);
+  Toolbox.changeStyleValue = function(style, value) {
+    // If there is an element selected, it will change that element's
+    // CSS to reflect the changes
+    if (isSelected()) {
+      $(FontViewer.Env.selected).css(style, value);
+    } else {
+      console.log('No Element Selected');
+    }
+  };
 
+  Toolbox.getStyles = function(elem) {
+
+    var output = {};
+
+    for (var i = 0; i < styles.length; i++) {
+      output[styles[i]] = $(elem).css(styles[i])
+    }
+
+    return output;
+  };
+
+})(FontViewer.Toolbox);
 
 
 /*
  * Font Viewer Model
  */
-
 
 (function(){
 
@@ -97,10 +104,7 @@ FontViewer.API.getStyles = function(elem) {
 
   if URL is /:
     use default styling
-
 */
-
-  var 
 
 })();
 
@@ -114,7 +118,7 @@ FontViewer.API.getStyles = function(elem) {
 
 
 
-
+/*
 var defaultData = {
   // Is there a selected element type
   selected: "None",
@@ -157,17 +161,13 @@ var defaultData = {
 
 // Backbone model
 var DesignModel = Backbone.Model.extend({
-  
   intialize: function() {
-    
+    //
   },
-
-  defaults: defaultData,
-
-  
-
+  defaults: defaultData
 });
 
+*/
 
 
 
