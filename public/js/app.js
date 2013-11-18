@@ -34,18 +34,18 @@ FontViewer.Env = {
 FontViewer.Toolbox = (function() {
 
   // An array of the css attributes that the application cares about
-  var styles = [
+  var STYLES = [
     'font-family',  'font-size',       'font-style',
     'line-height',  'color',           'letter-spacing',
     'word-spacing', 'text-decoration', 'text-align',
     'font-weight',  'margin-bottom'
-  ],
+  ];
 
   // Contains the CSS selector for the selected element
-  selected = '';
+  var _selected = '';
 
   function isSelected() {
-    return !selected === '';
+    return !_selected === '';
   };
 
   // Public API
@@ -53,16 +53,22 @@ FontViewer.Toolbox = (function() {
     
     // Sets the selected value to the parameter
     setSelected: function(elem) {
-      selected = elem;
+
+      //TODO: Do some validation for elem
+      if (typeof(elem) === 'string') {
+        _selected = elem;
+      } else {
+        console.log('Err: Not a String');
+      }
     },
 
     // Returns the value of selected
     getSelected: function() {
-      return selected; 
+      return _selected; 
     },
 
     deselect: function() {
-      selected = '';
+      _selected = '';
     },
 
     // Sets the value of a css attribute for the selected element
@@ -75,7 +81,7 @@ FontViewer.Toolbox = (function() {
       if ( isSelected() ) {
         
         // Changes the value
-        $(selected).css(style, value);
+        $(_selected).css(style, value);
       
       } else {
 
@@ -96,8 +102,8 @@ FontViewer.Toolbox = (function() {
        * Loops through the array of attributes and returns an object
        * Containing all of their values
        */
-      for (var i = 0; i < styles.length; i++) {
-        output[styles[i]] = $(elem).css(styles[i])
+      for (var i = 0; i < STYLES.length; i++) {
+        output[STYLES[i]] = $(elem).css(STYLES[i])
       }
 
       return output;
